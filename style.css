@@ -7,7 +7,7 @@
 }
 
 body {
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -16,8 +16,7 @@ body {
 }
 
 .header {
-  height: 10vh;
-  background-color: rgb(23, 192, 235);
+  height: 10%;
   width: 90%;
   border-radius: 20px;
   max-width: 480px;
@@ -27,11 +26,9 @@ body {
 }
 
 .main {
-  height: 60vh;
-  background-color: rgb(123, 220, 237);
+  height: 60%;
   width: 90%;
   max-width: 480px;
-  border-radius: 20px;
   position: relative;
   cursor: pointer;
 }
@@ -50,6 +47,9 @@ body {
           backface-visibility: hidden;
   transition: 0.5s linear;
   text-align: center;
+  color: white;
+  background-color: rgb(255, 90, 0);
+  border-radius: 20px;
 }
 .main .behind {
   width: 100%;
@@ -63,23 +63,24 @@ body {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   transition: 0.5s linear;
-  color: rgb(8, 86, 105);
+  color: white;
   text-align: center;
+  background-color: #012A61;
+  border-radius: 20px;
 }
 
 .controlPanel {
-  height: 20vh;
-  background-color: rgb(23, 192, 235);
+  height: 20%;
   width: 90%;
   max-width: 480px;
   border-radius: 20px;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 .controlPanel #nextButton {
   cursor: pointer;
-  background-color: rgb(8, 86, 105);
+  background-color: #069106;
   border: none;
   color: white;
   font-weight: bold;

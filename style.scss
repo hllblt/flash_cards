@@ -9,7 +9,7 @@
     -webkit-tap-highlight-color: transparent;
 }
 body {
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -18,8 +18,8 @@ body {
 }
 
 .header {
-    height: 10vh;
-    background-color: rgba(23, 192, 235, 1);
+    height: 10%;
+    // background-color: rgba(23, 192, 235, 1);
     width: 90%;
     border-radius: 20px;
     max-width: 480px; // media query yazılacak
@@ -29,11 +29,9 @@ body {
 }
 
 .main {
-    height: 60vh;
-    background-color: rgb(123, 220, 237);
+    height: 60%;
     width: 90%;
     max-width: 480px; // media query yazılacak
-    border-radius: 20px;
     // border: 1px solid black;
     position: relative;
     cursor: pointer;
@@ -53,6 +51,11 @@ body {
         backface-visibility: hidden;
         transition: 0.5s linear;
         text-align: center;
+        // color: rgb(8, 86, 105);
+        color: white;
+        background-color: rgb(255, 90, 0);
+        border-radius: 20px;
+        // border: 5px solid rgb(8, 86, 105);
     }
     .behind {
         width: 100%;
@@ -66,22 +69,28 @@ body {
         transform: rotateY(180deg);
         backface-visibility: hidden;
         transition: 0.5s linear;
-        color: rgb(8, 86, 105);
+        // color: rgb(8, 86, 105);
+        color: white;
         text-align: center;
+        background-color: #012A61;
+        border-radius: 20px;
+        // border: 5px solid rgb(123, 220, 237)
+        
     }
 }
 .controlPanel {
-    height: 20vh;
-    background-color: rgba(23, 192, 235, 1);
+    height: 20%;
+    // background-color: rgba(23, 192, 235, 1);
     width: 90%;
     max-width: 480px; // media query yazılacak
     border-radius: 20px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
     #nextButton {
         cursor: pointer;
-        background-color: rgb(8, 86, 105);
+        // background-color: rgb(8, 86, 105);
+        background-color: #069106;
         border: none;
         color: white;
         font-weight: bold;
