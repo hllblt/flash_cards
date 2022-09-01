@@ -79,14 +79,30 @@ body {
     }
 }
 .controlPanel {
-    height: 20%;
+    height:20%;
     // background-color: rgba(23, 192, 235, 1);
     width: 90%;
     max-width: 480px; // media query yazılacak
     border-radius: 20px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
+    padding-bottom: 30px;
+    .selectMenu{
+        width: 60%;
+        select{
+            margin-top: 10px;
+            border: none;
+            width: 100px;
+            height: 30px;
+            border-radius: 10px;
+            padding-left: 5px;
+            font-weight: bold;
+            font-size: larger;
+            color: white;
+            background-color: #4c4d4f;
+        }
+    }
     #nextButton {
         cursor: pointer;
         // background-color: rgb(8, 86, 105);

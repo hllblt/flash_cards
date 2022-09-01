@@ -1093,10 +1093,10 @@ main.addEventListener("click", () => {
 const nextButton = document.getElementById("nextButton");
 const frontNed = document.getElementById("frontNed");
 const behindEng = document.getElementById("behindEng");
-
+let limit = 1046;
 nextButton.addEventListener("click", () => {
     setTimeout(() => {
-        let picker = Math.floor(Math.random()*1046);
+        let picker = Math.floor(Math.random() * limit);
         frontNed.innerText = nlToEn[picker][0];
         behindEng.innerText = nlToEn[picker][1];
         front.style.transform = "rotateY(0deg)";
@@ -1111,8 +1111,13 @@ nextButton.addEventListener("click", () => {
     isTurned = false;
 });
 
+const selectMenu = document.getElementById("course");
+selectMenu.addEventListener("change", () => {
+    if (selectMenu.value === "40") {
+        limit = 1046;
+    } else {
+        limit = Number(selectMenu.value) * 25;
+    }
 
-console.log(Math.floor(Math.random()*1046));
-
-
-
+    // console.log(selectMenu.value);
+});
