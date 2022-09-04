@@ -1054,11 +1054,15 @@ const entered = yazi.split(`
 // console.log(entered);
 
 const nlToEn = new Array();
+let degistirilebilir = "";
 
 for (let i = 0; i < entered.length; i++) {
     nlToEn.push(entered[i].split("	"));
     nlToEn[i].splice(1, 1);
+    degistirilebilir += `['${nlToEn[i][0]}', '${nlToEn[i][1]}'],`;
 }
+
+
 
 // console.log(nlToEn);
 
@@ -1093,7 +1097,12 @@ main.addEventListener("click", () => {
 const nextButton = document.getElementById("nextButton");
 const frontNed = document.getElementById("frontNed");
 const behindEng = document.getElementById("behindEng");
-let limit = 1046;
+const firstAssignNum = Math.floor(Math.random()*1045);
+console.log(firstAssignNum);
+frontNed.innerText = nlToEn[firstAssignNum][0];
+behindEng.innerText = nlToEn[firstAssignNum][1];
+
+let limit = 1045;
 nextButton.addEventListener("click", () => {
     setTimeout(() => {
         let picker = Math.floor(Math.random() * limit);
@@ -1114,10 +1123,12 @@ nextButton.addEventListener("click", () => {
 const selectMenu = document.getElementById("course");
 selectMenu.addEventListener("change", () => {
     if (selectMenu.value === "40") {
-        limit = 1046;
+        limit = 1045;
     } else {
         limit = Number(selectMenu.value) * 25;
     }
 
     // console.log(selectMenu.value);
 });
+
+
