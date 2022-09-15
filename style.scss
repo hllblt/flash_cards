@@ -115,8 +115,9 @@ body {
         border-radius: 10px;
         width: 100px;
         height: 50px;
+        transition: 0.3s linear;
     }
     #nextButton:hover {
-        background-color: lighten(rgb(8, 86, 105), 10%);
+        background-color: darken(#069106, 10%);
     }
 }

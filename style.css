@@ -105,7 +105,8 @@ body {
   border-radius: 10px;
   width: 100px;
   height: 50px;
+  transition: 0.3s linear;
 }
 .controlPanel #nextButton:hover {
-  background-color: #0c7d98;
+  background-color: #046004;
 }/*# sourceMappingURL=style.css.map */
