@@ -1062,8 +1062,6 @@ for (let i = 0; i < entered.length; i++) {
     degistirilebilir += `['${nlToEn[i][0]}', '${nlToEn[i][1]}'],`;
 }
 
-
-
 // console.log(nlToEn);
 
 ///////////////////////////////////////////////////////////////////////////
@@ -1097,7 +1095,7 @@ main.addEventListener("click", () => {
 const nextButton = document.getElementById("nextButton");
 const frontNed = document.getElementById("frontNed");
 const behindEng = document.getElementById("behindEng");
-const firstAssignNum = Math.floor(Math.random()*1045);
+const firstAssignNum = Math.floor(Math.random() * 1045);
 console.log(firstAssignNum);
 // frontNed.innerText = nlToEn[firstAssignNum][0];
 // behindEng.innerText = nlToEn[firstAssignNum][1];
@@ -1110,18 +1108,20 @@ nextButton.addEventListener("click", () => {
         behindEng.innerText = nlToEn[picker][1];
         let measuredArray = nlToEn[picker][0].split(" ");
         let measure = measuredArray[0];
-        for(let i = 0;i<measuredArray.length;i++){
+        for (let i = 0; i < measuredArray.length; i++) {
             // console.log("hi");
-            measuredArray[i].length > measure.length ? measure = measuredArray[i] : null;
-            
+            measuredArray[i].length > measure.length
+                ? (measure = measuredArray[i])
+                : null;
         }
         console.log(measure);
-        
-        if(measure.length > 14){
-            frontNed.style.fontSize = "2rem"
-        }
-        else{
-            frontNed.style.fontSize = "3rem"
+
+        if (measure.length > 10) {
+            frontNed.style.fontSize = "2rem";
+        } else if (measure.length > 14) {
+            frontNed.style.fontSize = "1.5rem";
+        } else {
+            frontNed.style.fontSize = "3rem";
         }
         front.style.transform = "rotateY(0deg)";
         front.style.opacity = "1";
@@ -1145,5 +1145,3 @@ selectMenu.addEventListener("change", () => {
 
     // console.log(selectMenu.value);
 });
-
-

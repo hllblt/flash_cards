@@ -34,6 +34,8 @@ body {
 }
 .main h2 {
   font-size: 3rem;
+  width: 90%;
+  border: 1px solid black;
 }
 .main .front {
   width: 100%;
