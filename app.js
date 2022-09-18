@@ -1116,10 +1116,13 @@ nextButton.addEventListener("click", () => {
         }
         console.log(measure);
 
-        if (measure.length > 10) {
+        if (measure.length > 9) {
             frontNed.style.fontSize = "2rem";
         } else if (measure.length > 14) {
             frontNed.style.fontSize = "1.5rem";
+        } 
+        else if (measure.length > 18) {
+            frontNed.style.fontSize = "1rem";
         } else {
             frontNed.style.fontSize = "3rem";
         }
@@ -1142,6 +1145,6 @@ selectMenu.addEventListener("change", () => {
     } else {
         limit = Number(selectMenu.value) * 25;
     }
-
+    nextButton.click();
     // console.log(selectMenu.value);
 });
